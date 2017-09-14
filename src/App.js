@@ -10,6 +10,7 @@ import GoShopping from './components/GoShopping';
 import GoodsCar from './components/GoodsCar';
 import My from './components/My';
 import Detail from './components/Detail'
+import Search from "./components/KindsComponents/KindsSearch"
 class App extends Component {
 	constructor(){
 		super();
@@ -27,6 +28,8 @@ class App extends Component {
 	      <Route path="/goodsCar" component={GoodsCar} />
 	      <Route path="/my" component={My} />
 	      <Route path="/detail/:id" component={Detail}/>
+	      <Route path="/search" component={Search}/>
+	      
 	    </div>
       
 	      <ul id="app_footer">

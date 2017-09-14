@@ -1,0 +1,26 @@
+#ban-kind {
+  width: 100%; }
+  #ban-kind .ban {
+    display: inline-block;
+    margin-top: 0.2rem;
+    width: 100%; }
+    #ban-kind .ban img {
+      width: 100%; }
+  #ban-kind .mainkinds {
+    width: 100%; }
+    #ban-kind .mainkinds p {
+      height: 0.8rem;
+      line-height: 0.8rem;
+      text-align: center;
+      width: 100%; }
+    #ban-kind .mainkinds section {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+      #ban-kind .mainkinds section div {
+        width: 25%; }
+        #ban-kind .mainkinds section div a {
+          width: 100%;
+          display: inline-block; }
+          #ban-kind .mainkinds section div a img {
+            width: 100%; }

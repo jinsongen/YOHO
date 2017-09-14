@@ -1,0 +1,107 @@
+#maybelike{
+    width: 100%;
+    margin-top: 0.3rem;
+    background: white;
+    header{
+        height: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#A9A9A9;
+        span:nth-child(1){
+            display: inline-block;
+            padding: 0.03rem;
+            border:2px solid #A9A9A9;
+            border-radius: 50%;
+            margin-right: 0.1rem;
+        }
+        span:last-child{
+            font-size: 0.4rem;
+            font-weight: 200;
+        }
+    }
+    .likecontent{
+        display: flex;
+        flex-wrap: wrap;
+        section{
+            position: relative;
+            width: 50%;
+            padding: 0.15rem 0;
+            text-align: center;
+            a{
+                width: 2.8rem;
+                display: inline-block;
+                .goos-img{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .good-text{
+                    width: 100%;
+                    margin-top: 0.2rem;
+                    text-align: left;
+                    padding: 0 0.01rem;
+                    box-sizing: border-box;
+                    .title{
+                        font-size: 0.1rem;
+                        width: 100%;
+                        line-height: 0.2rem;
+                        -webkit-transform: scale(0.9); 
+                        color: black;
+                    }
+                    .price{
+                        font-size: 0.1rem;
+                        width: 100%;
+                        line-height: 0.2rem;
+                        margin-top: 0.2rem;
+                        -webkit-transform: scale(0.9); 
+                        color: black;
+                        
+                    }
+                }
+            }
+            .showfind{
+                position: absolute;
+                right: 0.25rem;
+                bottom: 0.08rem;
+                font-size: 0.3rem;
+                color: #A9A9A9;
+            }
+            .findmore{
+                position: absolute;
+                width: 2.8rem;
+                height: 3.7rem;
+                background: rgba(38,36,36,0.6);
+                top:0.18rem;
+                left: 0.2rem;
+//              display: flex;
+//              justify-content: center;
+//              align-items: center;
+//              display: none;
+                span{
+                    position: absolute;
+                    top:50%;
+                    left: 50%;
+                    margin-top: -0.55rem;
+                    margin-left: -0.55rem;
+                    font-size: 0.24rem;
+                    color: white;
+                    line-height: 1.1rem;
+                    height: 1.1rem;
+                    width: 1.1rem;
+                    text-align: center;
+                    background: #da2c2c;
+                    border-radius: 50%;
+                }
+            }
+            .none{
+                display: none;
+            }
+            .block{
+                display: block;
+            }
+        }
+    }
+}

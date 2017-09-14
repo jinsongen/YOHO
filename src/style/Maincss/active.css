@@ -1,0 +1,23 @@
+#active {
+  width: 100%;
+  height: 1.3rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #A9A9A9; }
+  #active section {
+    flex: 1;
+    height: 100%; }
+    #active section a {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      #active section a img {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-top: 0.2rem; }
+      #active section a span {
+        font-size: 0.1rem;
+        display: inline-block;
+        margin-top: 0.1rem; }

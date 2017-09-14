@@ -1,0 +1,35 @@
+#ban-kind{
+    width: 100%;
+    .ban{
+        display: inline-block;
+        margin-top: 0.2rem;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .mainkinds{
+        width: 100%;
+        p{
+            height: 0.8rem;
+            line-height: 0.8rem;
+            text-align: center;
+            width: 100%;
+        }
+        section{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            div{
+                width: 25%;
+                a{
+                    width: 100%;
+                    display: inline-block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

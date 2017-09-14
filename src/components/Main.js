@@ -3,6 +3,15 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import "../style/main.css"
 //@import 'nprogress/nprogress';
+import LunBo from './MainComponents/Lunbo'
+import Active from './MainComponents/Active'
+import MainKinds from './MainComponents/MainKinds'
+import LunBo2 from './MainComponents/Lunbo2'
+import HotBrand from './MainComponents/HotBrand'
+import Scroll from './MainComponents/Scroll'
+import MybeLike from './MainComponents/MybeLike'
+
+//import Drawer from './MainComponents/Drawer'
 class MainUI extends React.Component{
 	constructor(){
 		super();
@@ -13,19 +22,18 @@ class MainUI extends React.Component{
 	render(){
 		return(
 			<div id="main_wrap">
-				主页
-				<ul>
-					{
-						this.props.main_list.map((item, index)=>{
-							return <li key={"h_l_" + index}>
-								<img src={item.logo} />
-								<span>{item.shop_name}</span>
-								<span>{item.price}</span>
-								<Link to={"/detail/" + item.shop_name}>详情</Link>
-							</li>
-						})
-					}
-				</ul>
+				<header>
+					<span className="iconfont icon">&#xe667;</span>
+					<h3>YaoHe!</h3>
+					<span className="iconfont icon">&#xe665;</span>
+				</header>
+				<LunBo/>
+				<Active/>
+				<MainKinds/>
+				<LunBo2/>
+				<HotBrand/>
+				<Scroll/>
+				<MybeLike/>
 			</div>
 		)
 	}

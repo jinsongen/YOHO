@@ -1,0 +1,18 @@
+#hot-brand {
+  width: 100%; }
+  #hot-brand p {
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center; }
+  #hot-brand section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; }
+    #hot-brand section div {
+      width: 25%; }
+      #hot-brand section div img {
+        width: 100%;
+        display: block; }
+    #hot-brand section div:last-child {
+      width: 50%; }
