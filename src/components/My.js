@@ -1,12 +1,18 @@
 import React from 'react';
+import Header from './My/header'
+import ListNav from './My/listNav'
+import Clothes from './My/clothes'
+import '../style/my/my.css'
 class My extends React.Component{
 	constructor(){
 		super();
 	}
 	render(){
 		return(
-			<div>
-				我的
+			<div className = "my">
+				<Header/>
+				<ListNav/>
+				<Clothes/>
 			</div>
 		)
 	}

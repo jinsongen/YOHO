@@ -1,0 +1,78 @@
+.clothes{
+    width: 100%;
+    background: #fff;
+}
+.clothes .clothes-logo{
+    width: 100%;
+    height: 2rem;
+}
+.clothes-title{
+    margin: 0.58rem 0 0.65rem 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+.clothes-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.clothes-list li{
+    margin-bottom: 0.85rem;
+}
+.clothes-list img {
+    width:2.75rem;
+    height: 3.65rem;
+}
+.clothes-list p{
+    width:2.75rem;
+    box-sizing: border-box;
+    padding: 0 0.1rem;
+    line-height: 0.3rem;
+}
+.clothes-list p:nth-child(2){
+    margin-top:0.184rem; 
+}
+
+
+/* .clothesToTop .toTop-lt{
+    float: left;
+} */
+.clothesToTop{
+    height: 1.2rem;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    border-bottom: 1px solid #b0b0b0;
+    border-top: 1px solid #b0b0b0;
+}
+.clothesToTop .toTop-lt{
+    margin-top: 0.48rem;
+    margin-left: 0.29rem;
+    float: left;
+}
+.clothesToTop .toTop-lt a{
+    float: left;
+    padding: 0 0.123rem;
+}
+.clothesToTop .toTop-lt a:nth-child(1){
+    border-right: 1px solid #000;
+}
+.clothesToTop .toTop-rt{
+    float: right;
+    margin-top: 0.49rem;
+    margin-right: 0.6rem;
+}
+.clothesToTop .toTop-rt i {
+    margin-left: 0.08rem;
+    color: #000;
+}
+.clothesFooter{
+    height: 0.91rem;
+    width: 100%;
+    background: #eee;
+    text-align: center;
+    line-height:  0.91rem;
+    color: #666;
+}

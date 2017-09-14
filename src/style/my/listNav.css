@@ -1,0 +1,162 @@
+
+.list{
+    width: 100%;
+    /* background: #f0f0f0;   */
+    height: 100%; 
+    overflow: hidden;
+    margin-top: 0.26rem;
+}
+/*订单*/
+.list .oder{
+    
+    width: 100%;
+    background: #fff;
+}
+.list .oderTxt{
+    display: block;
+    height: 0.75rem;
+    border-bottom:1px solid #e0e0e0;
+}
+.list .oder-sp1{
+    float: left;
+    font-size: 14px;
+    margin: 0.25rem 0 0 0.28rem;
+}
+
+.list .oder-sp2{
+    float: right;
+    font-size: 16px;
+    color: #e0e0e0;
+    margin: 0.25rem  0.28rem 0 0;
+}
+.list .oderPic{
+    height: 1.15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.list .oderPic .iconfont{
+    font-size: 0.6rem;
+}
+
+/*地址管理*/
+.list .address{
+    width: 100%;
+    height: 0.75rem;
+    box-sizing: border-box;
+    padding:  0.23rem 0.28rem 0;
+    background: #fff;
+    margin: 0.28rem 0;
+  
+}
+.list .address-lt {
+    float: left;
+}
+.list .address-lt i{
+    font-size: 0.34rem;
+
+}
+.list .address-lt span{
+    font-size: 16px;
+    margin-left: 0.15rem;
+}
+.list .address-rt{
+    float: right;
+    font-size: 16px;
+}
+
+
+/*优惠*/
+.list .discountBox{
+     margin-bottom: 0.28rem;
+     width: 100%;
+}
+.list .discount{
+    width: 100%;
+    height: 0.75rem;
+    box-sizing: border-box;
+    padding:  0.23rem 0.28rem 0;
+    background: #fff;
+    border-bottom:1px solid #e0e0e0;
+   
+}
+.list .discount-lt {
+    float: left;
+}
+.list .discount-lt i{
+    font-size: 0.34rem;
+
+}
+.list .discount-lt span{
+    font-size: 16px;
+    margin-left: 0.15rem;
+}
+.list .discount-rt{
+    float: right;
+    font-size: 16px;
+}
+
+
+/*邀请好友*/
+.list .friendBox{
+    margin-bottom: 0.28rem;
+    width: 100%;
+}
+.list .friend{
+   width: 100%;
+   height: 0.75rem;
+   box-sizing: border-box;
+   padding:  0.23rem 0.28rem 0;
+   background: #fff;
+   border-bottom:1px solid #e0e0e0;
+  
+}
+.list .friend:nth-child(1){
+    background: #d0021b;
+    color: #fff;
+}
+.list .friend:nth-child(1) a{
+    color: #fff;
+}
+.list .friend-lt {
+   float: left;
+}
+.list .friend-lt i{
+   font-size: 0.34rem;
+
+}
+.list .friend-lt span{
+   font-size: 16px;
+   margin-left: 0.15rem;
+}
+.list .friend-rt{
+   float: right;
+   font-size: 16px;
+}
+
+
+/*服务与反馈*/
+.list .feedback{
+    width: 100%;
+    height: 0.75rem;
+    box-sizing: border-box;
+    padding:  0.23rem 0.28rem 0;
+    background: #fff;
+    margin-bottom: 0.51rem;
+  
+}
+.list .feedback-lt {
+    float: left;
+}
+.list .feedback-lt i{
+    font-size: 0.34rem;
+
+}
+.list .feedback-lt span{
+    font-size: 16px;
+    margin-left: 0.15rem;
+}
+.list .feedback-rt{
+    float: right;
+    font-size: 16px;
+}
