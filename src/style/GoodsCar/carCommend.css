@@ -1,0 +1,72 @@
+#carcommend {
+  width: 100%;
+  background: white; }
+  #carcommend .carcommend-title {
+    text-align: center;
+    font-size: 0.3rem;
+    line-height: 1.2rem; }
+  #carcommend .carcommend-wrap {
+    display: flex;
+    flex-wrap: wrap; }
+    #carcommend .carcommend-wrap section {
+      position: relative;
+      width: 50%;
+      padding: 0.15rem 0;
+      text-align: center; }
+      #carcommend .carcommend-wrap section a {
+        width: 2.8rem;
+        display: inline-block; }
+        #carcommend .carcommend-wrap section a .goos-img {
+          width: 100%; }
+          #carcommend .carcommend-wrap section a .goos-img img {
+            width: 100%; }
+        #carcommend .carcommend-wrap section a .good-text {
+          width: 100%;
+          margin-top: 0.2rem;
+          text-align: left;
+          padding: 0 0.01rem;
+          box-sizing: border-box; }
+          #carcommend .carcommend-wrap section a .good-text .title {
+            font-size: 0.1rem;
+            width: 100%;
+            line-height: 0.2rem;
+            -webkit-transform: scale(0.9);
+            color: black; }
+          #carcommend .carcommend-wrap section a .good-text .price {
+            font-size: 0.1rem;
+            width: 100%;
+            line-height: 0.2rem;
+            margin-top: 0.2rem;
+            -webkit-transform: scale(0.9);
+            color: black; }
+      #carcommend .carcommend-wrap section .showfind {
+        position: absolute;
+        right: 0.25rem;
+        bottom: 0.08rem;
+        font-size: 0.3rem;
+        color: #A9A9A9; }
+      #carcommend .carcommend-wrap section .findmore {
+        position: absolute;
+        width: 2.8rem;
+        height: 3.7rem;
+        background: rgba(38, 36, 36, 0.6);
+        top: 0.18rem;
+        left: 0.2rem; }
+        #carcommend .carcommend-wrap section .findmore span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -0.55rem;
+          margin-left: -0.55rem;
+          font-size: 0.24rem;
+          color: white;
+          line-height: 1.1rem;
+          height: 1.1rem;
+          width: 1.1rem;
+          text-align: center;
+          background: #da2c2c;
+          border-radius: 50%; }
+      #carcommend .carcommend-wrap section .none {
+        display: none; }
+      #carcommend .carcommend-wrap section .block {
+        display: block; }

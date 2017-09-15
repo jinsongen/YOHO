@@ -21,6 +21,9 @@
         width: 25%; }
         #ban-kind .mainkinds section div a {
           width: 100%;
-          display: inline-block; }
+          display: inline-block;
+          padding: 1px 1px 0;
+          box-sizing: border-box; }
           #ban-kind .mainkinds section div a img {
-            width: 100%; }
+            width: 100%;
+            display: block; }

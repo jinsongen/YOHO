@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import "../style/main.css"
+import "../style/Maincss/main.css"
 //@import 'nprogress/nprogress';
 import LunBo from './MainComponents/Lunbo'
 import Active from './MainComponents/Active'

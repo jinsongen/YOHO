@@ -1,0 +1,29 @@
+#GoodsCar-wrap {
+  width: 100%; }
+  #GoodsCar-wrap .goodscar-header {
+    width: 100%;
+    height: 0.9rem;
+    background: linear-gradient(top, #2b2a2a, #414141);
+    border-bottom: 1px solid #EEEEEE;
+    display: flex;
+    color: white; }
+    #GoodsCar-wrap .goodscar-header a, #GoodsCar-wrap .goodscar-header span {
+      width: 0.9rem;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      font-size: 0.3rem;
+      text-align: center;
+      color: white; }
+    #GoodsCar-wrap .goodscar-header span {
+      margin-right: 0.2rem;
+      font-size: 0.23rem;
+      font-weight: 400; }
+    #GoodsCar-wrap .goodscar-header .goodstrue {
+      display: block; }
+    #GoodsCar-wrap .goodscar-header .goodsfalse {
+      display: none; }
+    #GoodsCar-wrap .goodscar-header .goodscar-title {
+      flex: 1;
+      text-align: center;
+      line-height: 0.9rem;
+      font-size: 0.35rem; }
