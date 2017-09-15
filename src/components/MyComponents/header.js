@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../style/my/header.css'
+import '../../style/MyCss/header.css'
 class Header extends React.Component{
 	constructor(){
 		super();
@@ -9,7 +9,7 @@ class Header extends React.Component{
 		return(
 			<div className = "head">
 				<div className = "header">
-					<a>注册/登录</a>
+					<Link to = "/login">注册/登录</Link>
 				</div>
 				<div className = "nav">
 					<a>收藏的商品</a>

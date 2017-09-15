@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../style/my/listNav.css'
+import '../../style/MyCss/listNav.css'
 class ListNav extends React.Component{
 	constructor(){
 		super();

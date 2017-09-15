@@ -1,0 +1,49 @@
+.headerBox{
+    width: 100%;
+}
+.headerBox .header{
+    height: 2.5rem;
+    width: 100%;
+    background: url("//img11.static.yhbimg.com/yhb-img01/2017/08/24/10/0182d3359e850de97acb9a53cfb9067788.jpg?imageView2/2/w/750/h/290");
+    background-size: cover; 
+    position: relative;
+   
+  
+}
+.headerBox .header-top{
+    margin-top: 0.43rem;
+    box-sizing: border-box;
+    padding: 0  0.65rem;
+    width: 100%;
+}
+.headerBox .header-arc{
+    height: 0.4rem;
+    width: 0.4rem;
+    border-radius: 50%;
+    /* display: inline-block;   */
+    border: 2px solid #fff;
+    font-size: 16px;
+    line-height: 0.4rem;
+    text-align: center;
+    color: #fff;
+    float: left;
+}
+.headerBox .header-login{
+    height: 0.4rem;
+    width: 1rem;
+    text-align: center;
+    line-height: 0.4rem;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 16px;
+    float: right;
+    border-radius: .625rem;
+}
+.headerBox .header-Yoho{
+    width: 100%;    
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0.184rem;
+}

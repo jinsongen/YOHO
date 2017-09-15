@@ -1,0 +1,8 @@
+.KindsListComponent {
+  width: 100%;
+  height: 100%; }
+  .KindsListComponent .Kind_List_choose {
+    width: 100%;
+    height: 0.6rem;
+    background: #fff;
+    border-bottom: solid #ddd 0.01rem; }

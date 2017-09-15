@@ -1,0 +1,142 @@
+/*手机*/
+
+.form-phone {
+    /* width: 6.37rem; */
+    /* box-sizing: border-box; */
+    margin: 0.54rem 0.63rem 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.form-phone .phone-lt i {
+    font-size: 18px;
+    margin-right: 0.185rem;
+}
+
+.form-phone .phone-lt select {
+    font-size: 14px;
+    height: 0.46rem;
+    width: 1.1rem;
+    appearance: none;
+    border: none;
+    outline: none;
+}
+
+.form-phone .triangle {
+    float: left;
+    width: 0;
+    height: 0;
+    border-left: 0.1rem solid transparent;
+    border-right: 0.1rem solid transparent;
+    border-top: 0.14rem solid #000;
+    position: absolute;
+    bottom: 0.13rem;
+}
+
+.form-phone .phone-lt {
+    width: 1.85rem;
+    float: left
+}
+
+.form-phone .spacer {
+    width: 1px;
+    height: 0.23rem;
+    background: #000;
+    float: left;
+    margin-top: 0.15rem;
+}
+
+.form-phone .phoneNum {
+    margin-left: 0.2rem;
+    margin-top: 0.1rem;
+    border: none;
+    outline: none;
+}
+
+
+/*验证码*/
+
+.formCode {
+    margin: 0.54rem 0.63rem 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.formCode i {
+    font-size: 18px;
+    margin-right: 0.185rem;
+    color: #000;
+    float: left;
+}
+
+.formCode .codeMsg {
+    border: none;
+    outline: none;
+    color: #000;
+    float: left;
+}
+
+.formCode .getCode {
+    width: 1.2rem;
+    height: 0.43rem;
+    background: #444;
+    float: right;
+    border-radius: 0.625rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.43rem;
+    margin-bottom: 0.1rem;
+}
+
+
+/*换一批*/
+
+.formList {
+    margin: 0.43rem 0.63rem 0.35rem;
+}
+.formList .listTxt{
+    overflow: hidden;
+}
+.formList .txt-lt {
+    float: left;
+    color: #444;
+}
+
+.formList .txt-rt {
+    float: right;
+    color: #d0021b;
+}
+
+.formList .listPic {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.37rem;
+}
+
+.formList .listPic li {
+    width: 1.185rem;
+    height: 1.123rem;
+    border: 1px solid #e0e0e0;
+    background: url("https://m.yohobuy.com/passport/img-check.jpg?t=1505461991409");
+    background-position: 0 -0.06rem ; 
+}
+.fromBtn{
+    width: 100%;
+    height: 0.6rem;
+    text-align: center;
+    line-height: 0.6rem;
+    color: #fff;
+    background: #b0b0b0;
+    margin: 0.4rem 0 0.28rem;
+    border:none;
+    outline: none;
+}
+.fromAccount {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.71rem;
+}
+

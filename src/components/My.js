@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './My/header'
-import ListNav from './My/listNav'
-import Clothes from './My/clothes'
-import '../style/my/my.css'
+import Header from './MyComponents/header'
+import ListNav from './MyComponents/listNav'
+import Clothes from './MyComponents/clothes'
+import '../style/MyCss/my.css'
 class My extends React.Component{
 	constructor(){
 		super();

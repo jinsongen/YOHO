@@ -66,16 +66,26 @@ class KindsSearch extends React.Component{
 		  	                 <button>搜索</button>
 		  	           </div>
 		  	           <div className="neck_down">
-		  	                <li>热搜</li>
-		  	                <li>卡塔沙</li>
-		  	                <li>渔夫帽</li>
-		  	                <li>PUMA</li>
-		  	                <li>Vans</li>
-		  	                <li>手机壳</li>
-		  	                <li>休闲运动</li>
-		  	                <li>衬衫</li>
-		  	                <li>boys TX</li>
+		  	               
 		  	           </div>
+		  	    </div>
+		  	    
+		  	    <div className="kinds_contents">
+		  	      <div className="kinds_contents_box">
+		  	        <div className="kinds_just_search">
+		  	            <p>最近搜索</p>
+		  	            <span>格子衬衫</span>
+		  	        </div>
+		  	        <p>猜你想找</p>
+		  	          <span>休闲/运动鞋</span>
+		  	          <span>衬衫</span>
+		  	          <span>短袖</span>
+		  	          <span>PUMA精品</span>
+		  	          <span>T恤</span>
+		  	          <span>ROCOCO洛可可</span>
+		  	          <span>JNBY</span>
+		  	          <span>速写sCROQUIS</span>
+		  	        </div>
 		  	    </div>
 		  	 </div>
 		  )

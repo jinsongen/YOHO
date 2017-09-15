@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../style/my/clothes.css'
+import '../../style/MyCss/clothes.css'
 class Clothes extends React.Component {
     constructor() {
         super();

@@ -1,0 +1,24 @@
+.header-txt{
+    margin-left: 0.66rem;
+    margin-top: 0.46rem;
+    margin-bottom:0.42rem;
+}
+.header-arc{
+    height: 0.37rem;
+    width: 0.37rem;
+    border-radius: 50%;
+    /* display: inline-block; */
+    border: 1px solid #444;
+    font-size: 16px;
+    line-height: 0.37rem;
+    text-align: center;
+    color: #444;
+    float: left;
+}
+.header-tit {
+    margin-left: 1.83rem;
+    font-size: 18px;
+    margin-top: 0.1rem;
+    
+}
+

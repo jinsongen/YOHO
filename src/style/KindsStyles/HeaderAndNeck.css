@@ -1,0 +1,77 @@
+header {
+  width: 100%;
+  height: 0.9rem;
+  background: linear-gradient(top, #2b2a2a, #414141);
+  color: white;
+  font-size: 0.4rem;
+  display: flex;
+  border-bottom: 0.01rem #fff solid; }
+  header span {
+    display: block;
+    line-height: 0.9rem;
+    padding-left: 4%; }
+  header :nth-child(2) {
+    width: 70%;
+    height: 100%;
+    text-align: center; }
+  header a {
+    color: #fff;
+    display: block;
+    line-height: 0.9rem;
+    padding-left: 4%; }
+
+.tab {
+  width: 100%;
+  height: 1rem;
+  background: linear-gradient(top, #2b2a2a, #414141);
+  display: flex; }
+  .tab li {
+    flex: 1; }
+    .tab li a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      color: #fff;
+      font-size: 0.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+    .tab li i {
+      display: block;
+      font-size: 0.4rem; }
+    .tab li span {
+      display: block; }
+
+#tabNone {
+  height: 0;
+  overflow: hidden; }
+
+#tabBlock {
+  height: 1rem; }
+
+.neck {
+  width: 100%;
+  height: 0.7rem; }
+  .neck .neck_up {
+    width: 100%;
+    height: 0.7rem;
+    background: pink;
+    line-height: 0.7rem;
+    background: #f5f5f5; }
+    .neck .neck_up input {
+      width: 80%;
+      height: 0.5rem;
+      border: none;
+      border-radius: 0.35rem;
+      margin-left: 0.2rem;
+      padding-left: 0.2rem;
+      font-size: 0.2rem;
+      color: #bbb; }
+    .neck .neck_up button {
+      border: none;
+      width: 12%;
+      height: 0.55rem;
+      background: #f5f5f5;
+      font-size: 0.2rem;
+      color: #888; }
