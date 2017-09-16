@@ -108,6 +108,21 @@ class GoodsCar extends React.Component{
 				</div>
 			</div>
 				<Recommend/>
+				<div id="goodscar-footer" className={this.state.compile+"footer goodscar-footer"}>
+					<div className="checkbox iconfont">
+					 	<span className="checked" onClick={this.check.bind(this)}></span>
+					 	<span>全选</span>
+					 </div>
+					 <div className="car-allprice">
+					 	<p className="price">总计:¥49.00&nbsp;&nbsp;(1件)</p>
+					 	<p className="intro">不含运费</p>
+					 </div>
+					 <div className="car-compilebtn">
+					 	<button className="car-collectbtn">移入收藏夹</button>
+					 </div>
+					 <button className="car-setbtn"></button>
+				</div>
+				
 			</div>
 		)
 	}

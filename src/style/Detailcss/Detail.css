@@ -1,0 +1,105 @@
+#Detail-wrap {
+  width: 100%;
+  margin-bottom: 1rem; }
+  #Detail-wrap .detail-goodsinfo .title {
+    box-sizing: border-box;
+    padding: 0.25rem 0.3rem;
+    width: 100%;
+    background-color: #515150;
+    color: #fff; }
+    #Detail-wrap .detail-goodsinfo .title .name {
+      font-size: 0.3rem; }
+  #Detail-wrap .detail-goodsinfo .goods-price {
+    width: 100%;
+    padding: 0.25rem 0.3rem;
+    font-size: 0.3rem;
+    color: #d0021b;
+    border-bottom: 0.2rem solid gainsboro; }
+  #Detail-wrap .eva-pro {
+    display: flex;
+    height: 0.8rem;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 0.1rem 0; }
+    #Detail-wrap .eva-pro span {
+      display: inline-block; }
+    #Detail-wrap .eva-pro .border {
+      width: 0;
+      height: 90%;
+      border: 1px solid #ccc; }
+    #Detail-wrap .eva-pro .evaluate,
+    #Detail-wrap .eva-pro .problom {
+      flex: 1;
+      text-align: center;
+      font-size: 0.3rem; }
+    #Detail-wrap .eva-pro .evaluate {
+      color: #ccc; }
+  #Detail-wrap .pro-box {
+    width: 100%;
+    padding: 0.25rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc; }
+    #Detail-wrap .pro-box .question {
+      font-size: 0.23rem;
+      color: #444444;
+      font-weight: 600; }
+    #Detail-wrap .pro-box .answer {
+      color: #b0b0b0;
+      font-size: 0.2rem;
+      line-height: 0.25rem; }
+  #Detail-wrap .more {
+    font-size: 0.3rem;
+    color: #b0b0b0;
+    line-height: 0.8rem;
+    text-align: center;
+    border-bottom: 0.2rem solid gainsboro; }
+  #Detail-wrap .copyright {
+    height: 0.8rem;
+    border-top: 1px solid #ccc;
+    background-color: #eee;
+    color: #666;
+    text-align: center;
+    line-height: 0.8rem;
+    font-size: 0.2rem; }
+  #Detail-wrap .op-row {
+    padding: 0 0.25rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: 0.25rem;
+    display: flex; }
+    #Detail-wrap .op-row .user-name {
+      display: inline-block;
+      margin-right: 0.3rem; }
+    #Detail-wrap .op-row .back-to-top {
+      display: inline-block;
+      margin-left: 1.5rem; }
+  #Detail-wrap .detail-footer {
+    position: fixed;
+    bottom: 0;
+    background: white;
+    display: flex;
+    height: 1rem;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+    align-items: center; }
+    #Detail-wrap .detail-footer div {
+      height: 1rem;
+      font-size: 0.4rem;
+      width: 1rem;
+      color: #444;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; }
+      #Detail-wrap .detail-footer div span:last-child {
+        font-size: 0.2rem;
+        transform: scale(0.8); }
+    #Detail-wrap .detail-footer button {
+      padding: 0 0.2rem;
+      height: 0.7rem;
+      background: #eb0313;
+      color: white;
+      font-size: 0.28rem;
+      border: none;
+      float: right;
+      margin-left: 0.8rem; }

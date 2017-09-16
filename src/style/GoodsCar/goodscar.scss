@@ -1,37 +1,346 @@
-
-#GoodsCar-wrap{
-    width:100%;
-    .goodscar-header{
+#GoodsCar-wrap {
+    width: 100%;
+    .goodscar-header {
         width: 100%;
         height: 0.9rem;
-        background: linear-gradient(top,#2b2a2a,#414141);
+        background: linear-gradient(top, #2b2a2a, #414141);
         border-bottom: 1px solid #EEEEEE;
         display: flex;
-        color:white;
-        a,span{
+        color: white;
+        a,
+        span {
             width: 0.9rem;
             height: 0.9rem;
             line-height: 0.9rem;
-            font-size:0.3rem ;
+            font-size: 0.3rem;
             text-align: center;
-            color:white;
+            color: white;
         }
-        span{
+        span {
             margin-right: 0.2rem;
             font-size: 0.23rem;
             font-weight: 400;
         }
-        .goodstrue{
+        .goodstrue {
             display: block;
         }
-        .goodsfalse{
+        .goodsfalse {
             display: none;
         }
-        .goodscar-title{
+        .goodscar-title {
             flex: 1;
             text-align: center;
             line-height: 0.9rem;
             font-size: 0.35rem;
+        }
+    }
+    .goodscar-box {
+        width: 100%;
+        background: #f0f0f0;
+        .goodscar-plslog {
+            height: 0.5rem;
+            color: #24acaa;
+            text-align: center;
+            font-size: 0.28rem;
+            padding: 0.1rem 0;
+            span {
+                margin-right: 1px;
+            }
+            a {
+                display: inline-block;
+                font-size: 0.28rem;
+                color: white;
+                padding: 0 0.09rem;
+                line-height: 0.48rem;
+                background: red;
+                margin: 0 0.05rem;
+            }
+        }
+        .logintrue {
+            display: none;
+        }
+        .loginfalse {
+            display: block
+        }
+        .goodscar-empybox {
+            width: 100%;
+            text-align: center;
+            .iconfont {
+                display: inline-block;
+                font-size: 1.3rem;
+                color: #9a9a9a;
+                margin-top: 0.9rem;
+            }
+            p {
+                margin-top: 0.5rem;
+                color: black;
+            }
+            a {
+                display: inline-block;
+                border: 1px solid #505050;
+                border-radius: 5px;
+                margin: 0 auto;
+                color: #fff;
+                background: #444;
+                font-size: 0.2rem;
+                line-height: 0.4rem;
+                padding: 0 0.3rem;
+                margin-top: 0.4rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+        .emtrue {
+            display: none;
+        }
+        .emfalse {
+            display: block
+        }
+        .goodscar-isgoodbox {
+            width: 100%;
+            background: #f0f0f0;
+            dl {
+                width: 100%;
+                background: #f0f0f0;
+                dt {
+                    width: 100%;
+                    line-height: 0.5rem;
+                    color: #a3a3a3;
+                    padding-left: 0.3rem;
+                    box-sizing: border-box;
+                }
+                dd {
+                    background: white;
+                    border-bottom: 0.2rem solid #f0f0f0;
+                    display: flex;
+                    padding: 0.15rem;
+                    .checkbox {
+                        width: 0.8rem;
+                        line-height: 100%;
+                        font-size: 0.4rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .checked::before {
+                        content: "\e6a8";
+                    }
+                    .nochecked::before {
+                        content: "\e608";
+                    }
+                    .goods-info {
+                        flex: 1;
+                        width: 100%;
+                        display: flex;
+                        .imgbox {
+                            width: 1.3rem;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .nocompile {
+                            display: block;
+                            flex: 1;
+                            padding-left: 0.3rem;
+                            padding-right: 0.15rem;
+                            box-sizing: border-box;
+                            margin-top: 0.15rem;
+                            .title {
+                                display: inline-block;
+                                width: 100%;
+                                font-size: 0.23rem;
+                                line-height: 0.4rem;
+                            }
+                            .message {
+                                font-size: 0.25rem;
+                                color: #b6b6b6;
+                            }
+                            .price {
+                                font-size: 0.25rem;
+                                color: #d0253b;
+                                margin-top: 0.15rem;
+                            }
+                        }
+                        .iscompile {
+                            display: none;
+                        }
+                        .count {
+                            width: 0.3rem;
+                            padding-top: 0.2rem;
+                            font-size: 0.25rem;
+                            color: #b6b6b6;
+                        }
+                    }
+                }
+            }
+        }
+        .gdtrue {
+            display: block;
+        }
+        .gdfalse {
+            display: none;
+        }
+    }
+    .compile {
+        .goodscar-isgoodbox {
+            dl {
+                dd {
+                    .goods-info {
+                        .nocompile {
+                            display: none;
+                        }
+                        .iscompile {
+                            display: block;
+                            flex: 1;
+                            padding-left: 0.3rem;
+                            box-sizing: border-box;
+                            .btnbox {
+                                border: 1px solid #dfdfdf;
+                                border-radius: 3px;
+                                width: 2.4rem;
+                                height: 1.2rem;
+                                background: white;
+                                .btn {
+                                    width: 100%;
+                                    font-size: 0.25rem;
+                                    color: #444;
+                                    span {
+                                        display: inline-block;
+                                        text-align: center;
+                                        line-height: 0.6rem;
+                                        height: 0.6rem;
+                                        font-weight: 600;
+                                    }
+                                    .addcount,
+                                    .subcount {
+                                        width: 0.6rem;
+                                        font-size: 0.3rem;
+                                    }
+                                    .num {
+                                        width: 1.15rem;
+                                        border: 1px solid #dfdfdf;
+                                        border-top: 0;
+                                        border-bottom: 0;
+                                    }
+                                }
+                                .message {
+                                    width: 100%;
+                                    height: 0.55rem;
+                                    line-height: 0.6rem;
+                                    border-top: 1px solid #dfdfdf;
+                                    display: flex;
+                                    span {
+                                        flex: 1;
+                                        margin-left: 0.25rem;
+                                    }
+                                    i {
+                                        width: 0.6rem;
+                                        text-align: center;
+                                        font-size: 0.23rem;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                            .price {
+                                font-size: 0.25rem;
+                                color: #d0253b;
+                                margin-top: 0.15rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .goodscar-footer {
+        width: 100%;
+        height: 1rem;
+        background: white;
+        position: fixed;
+        bottom: 0;
+        align-items: center;
+        display: flex;
+        .car-compilebtn{
+            display: none;
+        }
+        .checkbox {
+            width: 0.8rem;
+            height: 100%;
+            line-height: 100%;
+            font-size: 0.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column ;
+            span:first-child{
+                display: inline-block;
+                margin-top: 0.1rem;
+            }
+            span:last-child{
+                display: inline-block;
+                font-size: 0.22rem;
+                
+            }
+            .checked::before {
+                content: "\e6a8";
+            }
+            .nochecked::before {
+                content: "\e608";
+            }
+        }
+        .car-allprice{
+            flex: 1;
+            text-align: right;
+            padding-right: 0.2rem;
+            box-sizing: border-box;
+            .price{
+                color: #d0253b;
+                font-size: 0.28rem;
+            }
+            .intro{
+                    color: #b6b6b6;
+                font-size: 0.2rem;
+                    
+            }
+        }
+        .car-setbtn{
+            width: 1.5rem;
+            height: 0.7rem;
+            line-height: 0.7rem;
+            color:white;
+            border-radius:3px;
+            text-align: center;
+            background: #d0253b;
+            border: none;
+            font-size: 0.25rem;
+            margin-right: 0.2rem;
+        }
+        .car-setbtn:before{
+            content:"结算";
+        }
+    }
+    .compilefooter{
+        .car-allprice{
+            display: none;
+        }
+        .car-setbtn:before{
+            content:"删除";
+        }
+        .car-compilebtn{
+            display: block;
+            flex: 1;
+            text-align: right;
+            .car-collectbtn{
+                width: 1.5rem;
+                height: 0.7rem;
+                line-height: 0.7rem;
+                color:white;
+                border-radius:3px;
+                text-align: center;
+                background: grey;
+                border: none;
+                font-size: 0.25rem;
+                margin-right: 0.2rem;
+            }
         }
     }
 }

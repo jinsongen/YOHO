@@ -1,6 +1,7 @@
 #carcommend {
   width: 100%;
-  background: white; }
+  background: white;
+  margin-bottom: 1rem; }
   #carcommend .carcommend-title {
     text-align: center;
     font-size: 0.3rem;

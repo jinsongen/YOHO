@@ -22,7 +22,7 @@ export default class MaybeLike extends React.Component{
 		for(var i=0;i<10;i++){
 			arr.push(
 				<section key={"mblike"+i}>
-						<Link to="/" onClick={this.add}>
+						<Link to={"/detail/"+i} onClick={this.add}>
 							<div className="goos-img">
 								<img src="//img10.static.yhbimg.com/goodsimg/2017/08/22/09/01a67fa242691217a12decd290e0cbe447.jpg?imageMogr2/thumbnail/235x314/extent/235x314/background/d2hpdGU=/position/center/quality/60/format/webp" />
 								
@@ -46,10 +46,10 @@ export default class MaybeLike extends React.Component{
 	render(){
 		return(
 			<div id="maybelike">
-				<header className="iconfont icon">
+				<div className="iconfont icon">
 					<span>&#xe679;</span>
 					<span>你可能喜欢</span>
-				</header>
+				</div>
 				<div className="likecontent">
 					{this.loadgoods()}
 				</div>

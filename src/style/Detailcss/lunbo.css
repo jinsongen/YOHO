@@ -1,0 +1,17 @@
+#Detail-banwrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 0; }
+  #Detail-banwrap .slick-slider {
+    width: 68.5%; }
+    #Detail-banwrap .slick-slider img {
+      width: 100%; }
+    #Detail-banwrap .slick-slider .slick-dots {
+      bottom: 0.1rem; }
+      #Detail-banwrap .slick-slider .slick-dots li button:before {
+        opacity: 0.7; }
+      #Detail-banwrap .slick-slider .slick-dots .slick-active button:before {
+        opacity: 0.8;
+        color: white; }

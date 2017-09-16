@@ -10,7 +10,7 @@ import LunBo2 from './MainComponents/Lunbo2'
 import HotBrand from './MainComponents/HotBrand'
 import Scroll from './MainComponents/Scroll'
 import MybeLike from './MainComponents/MybeLike'
-
+ import Footer from './Footer'
 //import Drawer from './MainComponents/Drawer'
 class MainUI extends React.Component{
 	constructor(){
@@ -34,6 +34,7 @@ class MainUI extends React.Component{
 				<HotBrand/>
 				<Scroll/>
 				<MybeLike/>
+				<Footer/>
 			</div>
 		)
 	}
