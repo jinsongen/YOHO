@@ -47,6 +47,7 @@ class KindsSearch extends React.Component{
 	render(){
 		  return (
 		  	 <div className="kindsSearch">
+		  	 <div className="flexibility">
 		  	    <header>
 		  	           <Link to="/kinds"><span className="iconfont icon">&#xe67d;</span></Link>
 		  	           <span>搜索</span>
@@ -66,7 +67,17 @@ class KindsSearch extends React.Component{
 		  	                 <button>搜索</button>
 		  	           </div>
 		  	           <div className="neck_down">
-		  	               
+		  	              <ul>
+		  	              	  <li>热搜</li>
+		  	               	  <span>运动鞋</span>
+				  	          <span>衬衫</span>
+				  	          <span>短袖</span>
+				  	          <span>PUMA精品</span>
+				  	          <span>T恤</span>
+				  	          <span>ROKEKE</span>
+				  	          <span>JNBY</span>
+				  	          <span>速写sCROQUIS</span>
+		  	              </ul>
 		  	           </div>
 		  	    </div>
 		  	    
@@ -87,6 +98,13 @@ class KindsSearch extends React.Component{
 		  	          <span>速写sCROQUIS</span>
 		  	        </div>
 		  	    </div>
+		  	    </div>
+		  	        <div className="Kinds_bottom">
+		  	             <span><a>登录</a> / <a>注册</a></span><span className="iconfont">back to top &#xe679;</span>
+		  	        </div>
+		  	        <div className="copyright">
+                        CopyRight©2007-2016 南京新与力文化传播有限公司
+                    </div>
 		  	 </div>
 		  )
 	}

@@ -2,6 +2,7 @@ import React from 'react';
 import KindsSearch from "./KindsComponents/KindsSearch"
 import {Link} from 'react-router-dom'
 
+import Footer from "./Footer"
 import "../style/KindsStyles/Kinds.css"
 class Kinds extends React.Component{
 	constructor(){
@@ -59,6 +60,7 @@ class Kinds extends React.Component{
 				          <li>短袖</li>
 				     </div>
 				 </div>
+				 <Footer />
 			</div>
 		)
 	}
