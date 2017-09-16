@@ -15,6 +15,7 @@ import KindsSearch from "./components/KindsComponents/KindsSearch"
 
 import Login from './components/LoginComponents/login';
 import Register from './components/RegisterComponents/register';
+import Guang from './components/GuangComponent/guang';
 class App extends Component {
 	constructor(){
 		super();
@@ -37,6 +38,7 @@ class App extends Component {
 	      
 	      	      <Route path="/login" component={Login}/>
 				<Route path="/register" component={Register}/>
+				<Route path="/guang" component={Guang}/>
 	    </div>
       
 	      

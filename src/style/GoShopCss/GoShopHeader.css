@@ -1,0 +1,17 @@
+.header{
+    background: #fff;
+}
+.header-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 0.8rem;
+}
+.header-nav a{
+    font-size: 15px;
+    color: #ccc;
+}
+.header-nav .focus{
+    color: #000;
+}

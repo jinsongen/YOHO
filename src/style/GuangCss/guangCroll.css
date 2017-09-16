@@ -1,0 +1,31 @@
+.croll{
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+    margin: 0.23rem 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.croll-list{
+    width: 34rem;
+    padding: 0.292rem 0;
+    height: 0.266rem;
+    box-sizing: border-box;
+}
+.croll-list li{
+    float: left;
+    overflow: hidden;
+    height: 2.3rem;
+    margin-left: 0.323rem;
+}
+.croll-list img{
+    width: 1.553rem;
+    height: 1.754rem;
+    display: block;
+}
+.croll-list p{
+    text-align: center;
+    color: #fff;
+    background: #616362
+}
