@@ -4,6 +4,7 @@ import Header from './guangHeader'
 import Introduce from './guangIntroduce'
 import List from './guangList'
 import Croll from './guangCroll'
+import Brand from './guangBrand'
 class Guang extends React.Component{
 	constructor(){
 		super();
@@ -15,6 +16,7 @@ class Guang extends React.Component{
 				<Introduce/>
 				<List/>
 				<Croll/>
+				<Brand/>
 			</div>
 		)
 	}

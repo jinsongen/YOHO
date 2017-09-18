@@ -41,6 +41,7 @@
     box-sizing: border-box;
     padding: 0.2rem 0.29rem 0;
     border-bottom: 1px solid #e0e0e0;
+    background: #fff;
 }
 .header-person img{
     height: 0.51rem;

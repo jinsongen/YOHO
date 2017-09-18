@@ -6,7 +6,7 @@ class Header extends React.Component{
 	}
 	render(){
 		return(
-			<div className = "header">
+			<div className = "goshop-header">
 				<div className = "header-nav">
                     <a className = "focus">最新</a>
                     <a>人气</a>

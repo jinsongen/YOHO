@@ -1,9 +1,9 @@
-.header-txt{
+.register-header .header-txt{
     margin-left: 0.66rem;
     margin-top: 0.46rem;
     margin-bottom:0.42rem;
 }
-.header-arc{
+.register-header .header-arc{
     height: 0.37rem;
     width: 0.37rem;
     border-radius: 50%;
@@ -15,7 +15,7 @@
     color: #444;
     float: left;
 }
-.header-tit {
+.register-header .header-tit {
     margin-left: 1.83rem;
     font-size: 18px;
     margin-top: 0.1rem;

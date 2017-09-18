@@ -3,37 +3,38 @@
     box-sizing: border-box;
     padding: 0 0.29rem;
     background: #fff;
+    overflow: hidden;
 }
-h3{
+.introduce h3{
     font-size: 18px;
     margin-top: 0.15rem;
     font-weight: bold;
 }
-.notice{
+.introduce .notice{
     overflow: hidden;
     margin-top: 0.1rem;
     
 }
-.notice-lt{
+.introduce .notice-lt{
     float: left;
 }
-.notice-timer i{
+.introduce .notice-timer i{
     margin-right: 0.123rem;
     font-size: 13px;
 }
-.notice-timer .eyes{
+.introduce .notice-timer .eyes{
     margin-left: 0.25rem;
     font-size: 18px;
 }
-.notice-timer  span{
+.introduce .notice-timer  span{
     color: #b0b0b0;
 }
-.clothesPic{
+.introduce .clothesPic{
     width: 100%;
     display: block;
     margin-top: 0.43rem;
 }
-.clothesDetail{
+.introduce .clothesDetail{
     margin-top: 0.31rem;
     line-height: 0.34rem;
 }

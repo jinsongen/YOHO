@@ -10,9 +10,11 @@ class LoginHeader extends React.Component{
 			<div className = "headerBox">
 				<div className = "header clear">
 					<div className = "header-top">
-						<span className = "header-arc">
-							<i className = "iconfont iconfont-arrow2-left"></i>
-						</span>
+						<Link to = "/my">
+							<span className = "header-arc">
+								<i className = "iconfont iconfont-arrow2-left"></i>
+							</span>
+						</Link>
 						<Link to = "/register">
 							<span className = "header-login">
 								注册
