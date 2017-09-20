@@ -1,28 +1,56 @@
 import React from 'react';
 import KindsSearch from "./KindsComponents/KindsSearch"
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import axios from "axios"
 
 import Footer from "./Footer"
 import "../style/KindsStyles/Kinds.css"
-class Kinds extends React.Component{
-	constructor(){
+class Kinds extends React.Component {
+	constructor() {
 		super();
-			
+		this.state = {
+			arrKinds : [],
+			arrKinds2 : [],
+			father:''
+		}
+        this.kindsChangeList = this.kindsChangeList.bind(this)
 	}
-	
-	routerNone(){
-//		     if(this.props.routerIsShow){
-//		     	    this.state.routerIsShow = false   
-//		     }
-//		     if(!this.props.routerIsShow){
-//		     	    this.state.routerIsShow = true
-//		     }
-		     console.log(this.state.routerIsShow)
-	}
-	
-	render(){
-		return(
-			<div className="kinds">				
+
+
+componentDidMount() {
+	var that = this
+	axios.get("/api/getlist").then(function(res) {
+//		console.log(res)
+		that.state.arrKinds = res.data[0].data
+		that.setState({
+			arrKinds: that.state.arrKinds
+		})
+		setTimeout(function(){
+			  that.kindsChangeList(0)
+		},0)
+	}, function(err) {
+		console.log(err)
+	})
+}
+
+kindsChangeList(a){
+	 var that = this  
+	 that.state.father = a
+	 axios.get("/api/getlist").then(function(res){
+	 	 that.state.arrKinds2 = res.data[0].data[a].data.data.recommend.categoryrecommend 
+	 	 that.setState({
+	 	 	   arrKinds2 : that.state.arrKinds2
+	 	 })
+//	 	 console.log(that.state.arrKinds2)	 	 
+	 },function(err){
+	 	 console.log(err)
+	 })
+	   
+}
+
+render() {
+	return(
+		<div className="kinds">				
 				 <div className="Kinds_header" >
 			  	     <Link to={"/kindssearch"}>
 			  	          <i className="iconfont icon">&#xe709;</i>
@@ -37,36 +65,32 @@ class Kinds extends React.Component{
 				 </div>
 				 <div className="kinds_list">
 				     <div className="kinds_list_left">
-				           <li>上衣</li>
-				           <li>鞋类</li>
-				           <li>裤类</li>
-				           <li>帽类</li>
-				           <li>包类</li>
-				           <li>家具服</li>
-				           <li>数码</li>
-				           <li>个护/美妆</li>
-				           <li>厨房用具</li>
-				           <li>生活电器</li>
-				           <li>文具用品</li>
-				           <li>体育用品</li>
+				         {this.state.arrKinds.map((item,index)=>{
+	     	          	 	    return (
+	     	          	 	    <li onClick={()=>{this.kindsChangeList(index)}} key={"iidd"+index}>{item.name}</li>
+	     	          	 	    )
+
+	   	     	          	 })
+				         }
 				     </div>
 				     <div className="kinds_list_right">
-				          <Link to="/kindslistcomponent">全部衣服</Link>
-				          <li>运动衣</li>
-				          <li>衬衫</li>
-				          <li>卫衣</li>
-				          <li>毛衫</li>
-				          <li>礼服</li>
-				          <li>短袖</li>
+				     {
+				     	  this.state.arrKinds2.map((item,index)=>{
+				     	  	   return (
+				     	  	   	    <Link key={"kinds2"+ index} to={{pathname:'/kindslistcomponent',state:{item:index,father:this.state.father}}}>{item.name}
+				     	  	   	        <img src={item.imageurl} />
+				     	  	   	    </Link>
+				     	  	   )
+				     	  	 
+				     	  })
+				     }
+				          		         
 				     </div>
 				 </div>
 				 <Footer />
 			</div>
-		)
-	}
-	
-	
-	
-	
+	)
+}
+
 }
 export default Kinds

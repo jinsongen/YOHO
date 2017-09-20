@@ -29,7 +29,7 @@
                 .goos-img{
                     width: 100%;
                     img{
-                        width: 100%;
+                        width: 80%;
                     }
                 }
                 .good-text{
@@ -44,6 +44,15 @@
                         line-height: 0.2rem;
                         -webkit-transform: scale(0.9); 
                         color: black;
+                        
+                                                                      
+                        text-overflow: -o-ellipsis-lastline;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        
                     }
                     .price{
                         font-size: 0.1rem;

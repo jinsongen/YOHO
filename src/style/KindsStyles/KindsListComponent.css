@@ -27,7 +27,7 @@
         .KindsListComponent .likecontent section a .goos-img {
           width: 100%; }
           .KindsListComponent .likecontent section a .goos-img img {
-            width: 100%; }
+            width: 80%; }
         .KindsListComponent .likecontent section a .good-text {
           width: 100%;
           margin-top: 0.2rem;
@@ -39,7 +39,13 @@
             width: 100%;
             line-height: 0.2rem;
             -webkit-transform: scale(0.9);
-            color: black; }
+            color: black;
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; }
           .KindsListComponent .likecontent section a .good-text .price {
             font-size: 0.1rem;
             width: 100%;

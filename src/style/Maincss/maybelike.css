@@ -41,23 +41,27 @@
           box-sizing: border-box; }
           #maybelike .likecontent section a .good-text .title {
             font-size: 0.1rem;
+            transform: scale(0.7);
             width: 100%;
-            line-height: 0.2rem;
             -webkit-transform: scale(0.9);
-            color: black; }
+            color: black;
+            line-height: 0.3rem;
+            min-height: 0.9rem; }
           #maybelike .likecontent section a .good-text .price {
             font-size: 0.1rem;
             width: 100%;
             line-height: 0.2rem;
-            margin-top: 0.2rem;
             -webkit-transform: scale(0.9);
-            color: black; }
+            color: black;
+            color: red; }
       #maybelike .likecontent section .showfind {
         position: absolute;
-        right: 0.25rem;
-        bottom: 0.08rem;
+        right: 0.3rem;
+        bottom: 0.1rem;
         font-size: 0.3rem;
-        color: #A9A9A9; }
+        height: 0.3rem;
+        color: #A9A9A9;
+        display: inline-block; }
       #maybelike .likecontent section .findmore {
         position: absolute;
         width: 2.8rem;

@@ -22,10 +22,12 @@
             font-weight: 400;
         }
         .goodstrue {
-            display: block;
+//          display: block;
+            visibility: inherit;
         }
         .goodsfalse {
-            display: none;
+//          display: none;
+            visibility: hidden;
         }
         .goodscar-title {
             flex: 1;
@@ -299,7 +301,6 @@
             .intro{
                     color: #b6b6b6;
                 font-size: 0.2rem;
-                    
             }
         }
         .car-setbtn{
@@ -314,16 +315,14 @@
             font-size: 0.25rem;
             margin-right: 0.2rem;
         }
-        .car-setbtn:before{
-            content:"结算";
-        }
+        
     }
     .compilefooter{
         .car-allprice{
             display: none;
         }
-        .car-setbtn:before{
-            content:"删除";
+        .car-setbtn{
+            display: none;
         }
         .car-compilebtn{
             display: block;
@@ -340,6 +339,18 @@
                 border: none;
                 font-size: 0.25rem;
                 margin-right: 0.2rem;
+            }
+            .car-remove{
+                 width: 1.5rem;
+            height: 0.7rem;
+            line-height: 0.7rem;
+            color:white;
+            border-radius:3px;
+            text-align: center;
+            background: #d0253b;
+            border: none;
+            font-size: 0.25rem;
+            margin-right: 0.2rem;
             }
         }
     }

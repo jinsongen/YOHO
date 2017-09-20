@@ -8,7 +8,8 @@ class KindsSearch extends React.Component{
 		  super();
 		  this.state = {
 		  	   isShow : "tabNone",
-		  	   hot_word:[]
+		  	   hot_word:[],
+		  	   canSearch:[]
 		  }
 		  this.showTab = this.showTab.bind(this);
 	}
@@ -33,17 +34,27 @@ class KindsSearch extends React.Component{
 	
 	componentWillMount(){
 		  
-//		   axios.get("/api/getdata").then(function(res){
-//		   	   this.setState({
-//		   	   	  hotList : res.data      
-//		   	   })
-//		   	  
-//		   	   console.log(this.state.hotList)
-//		   }).then(function(err){
-//		   	  console.log(err)
-//		   })
 	}
-	
+	oninput(){
+		 var that = this  
+		 that.state.canSearch = []
+		 axios.get("/api/getlist").then(function(res){
+		 	
+		 	for(var i=0;i<res.data[0].data.length;i++){
+		 		   that.state.canSearch.push(
+		 		   	   res.data[0].data[i].name
+		 		   )
+		 	}
+		 
+           console.log(that.state.canSearch)
+            that.setState({
+            	   canSearch:that.state.canSearch
+            })
+		 },function(err){
+		 	 console.log(err)
+		 })
+	   
+	}
 	render(){
 		  return (
 		  	 <div className="kindsSearch">
@@ -63,8 +74,15 @@ class KindsSearch extends React.Component{
 		  	    
 		  	    <div className="neck">		  	    
 		  	           <div className="neck_up">
-		  	                 <input className='iconfont icon' type="text" placeholder="&#xe709; &nbsp;&nbsp;满额最高减200元"/>
+		  	                 <input onFocus={()=>{this.oninput()}} className='iconfont icon' type="text" placeholder="&#xe709; &nbsp;&nbsp;满额最高减200元"/>
 		  	                 <button>搜索</button>
+		  	           </div>
+		  	           <div className="kinds_Search">
+		  	                {
+		  	                	 this.state.canSearch.map((item,index)=>{
+		  	                	 	    return (<Link key={"sss"+index} to="/kinds">{item}</Link>)
+		  	                	 })
+		  	                }
 		  	           </div>
 		  	           <div className="neck_down">
 		  	              <ul>

@@ -3,11 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.3rem 0; }
+  height: 7rem; }
   #Detail-banwrap .slick-slider {
+    height: 6rem;
     width: 68.5%; }
     #Detail-banwrap .slick-slider img {
-      width: 100%; }
+      width: 100%;
+      height: 6rem; }
     #Detail-banwrap .slick-slider .slick-dots {
       bottom: 0.1rem; }
       #Detail-banwrap .slick-slider .slick-dots li button:before {

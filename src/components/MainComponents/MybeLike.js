@@ -1,10 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import '../../style/Maincss/maybelike.css'
+import axios from 'axios'
 export default class MaybeLike extends React.Component{
 	constructor(){
 		super();
 		this.showfind=this.showfind.bind(this);
+		this.loadgoods=this.loadgoods.bind(this)
+		this.state={
+			listarr:[]
+		}
+		
 	}
 	showfind(e){
 		if(e.currentTarget.nextSibling.className=="findmore none"){
@@ -17,19 +23,25 @@ export default class MaybeLike extends React.Component{
 		}
 //e.currentTarget.nextSibling.className="findmore block"
 	}
+	componentDidMount(){
+		this.loadgoods();
+		
+	}
 	loadgoods(){
-		var arr=[]
+		var that = this;
+		axios.get('/api/getlist').then(res=>{
+			var indexlistarr=res.data[0].data[0].data.data.recommend.categoryrecommend[0].data.data.product_list;
+			console.log(indexlistarr)
 		for(var i=0;i<10;i++){
-			arr.push(
-				<section key={"mblike"+i}>
-						<Link to={"/detail/"+i} onClick={this.add}>
+			that.state.listarr.push(
+				<section key={indexlistarr[i].itemcode}>
+						<Link to={"/detail?itemcode="+indexlistarr[i].itemcode} onClick={this.add}>
 							<div className="goos-img">
-								<img src="//img10.static.yhbimg.com/goodsimg/2017/08/22/09/01a67fa242691217a12decd290e0cbe447.jpg?imageMogr2/thumbnail/235x314/extent/235x314/background/d2hpdGU=/position/center/quality/60/format/webp" />
-								
+								<img src={indexlistarr[i].image} />
 							</div>
 							<div className="good-text">
-								<p className="title">HASO × YOHOOD合作款联名迷彩卫衣</p>
-								<p className="price">¥780.00</p>
+								<p className="title">{indexlistarr[i].name}</p>
+								<p className="price">{"￥"+indexlistarr[i].price}</p>
 							</div>
 						</Link>
 						<span className="showfind iconfont icon" onClick={this.showfind}>
@@ -40,8 +52,17 @@ export default class MaybeLike extends React.Component{
 						</div>
 					</section>
 			)
+			
 		}
-		return arr
+		that.setState({
+				listarr:that.state.listarr
+			})
+		console.log(that.state.listarr)
+		}).catch(err=>{
+			console.log(err)
+		})
+		
+		
 	}
 	render(){
 		return(
@@ -51,7 +72,7 @@ export default class MaybeLike extends React.Component{
 					<span>你可能喜欢</span>
 				</div>
 				<div className="likecontent">
-					{this.loadgoods()}
+					{this.state.listarr}
 				</div>
 			</div>
 		)

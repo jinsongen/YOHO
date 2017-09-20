@@ -5,13 +5,13 @@
   background: #efefef;
   overflow-x: hidden;
   margin-bottom: 1rem; }
-  #main_wrap > header {
+  #main_wrap .main-header {
     width: 100%;
     height: 0.9rem;
     background: linear-gradient(top, #2b2a2a, #414141);
     border-bottom: 1px solid #EEEEEE;
     display: flex; }
-    #main_wrap > header span {
+    #main_wrap .main-header span {
       height: 0.9rem;
       width: 0.9rem;
       line-height: 0.9rem;
@@ -19,7 +19,7 @@
       display: inline-block;
       color: white;
       font-size: 0.4rem; }
-    #main_wrap > header h3 {
+    #main_wrap .main-header h3 {
       flex: 1;
       line-height: 0.9rem;
       text-align: center;

@@ -81,8 +81,9 @@
     height: 1rem;
     padding: 0 0.2rem;
     box-sizing: border-box;
-    align-items: center; }
-    #Detail-wrap .detail-footer div {
+    align-items: center;
+    width: 100%; }
+    #Detail-wrap .detail-footer div, #Detail-wrap .detail-footer a {
       height: 1rem;
       font-size: 0.4rem;
       width: 1rem;
@@ -91,10 +92,10 @@
       justify-content: center;
       flex-direction: column;
       align-items: center; }
-      #Detail-wrap .detail-footer div span:last-child {
+      #Detail-wrap .detail-footer div span:last-child, #Detail-wrap .detail-footer a span:last-child {
         font-size: 0.2rem;
         transform: scale(0.8); }
-    #Detail-wrap .detail-footer button {
+    #Detail-wrap .detail-footer .addcarbtn {
       padding: 0 0.2rem;
       height: 0.7rem;
       background: #eb0313;
@@ -103,3 +104,121 @@
       border: none;
       float: right;
       margin-left: 0.8rem; }
+  #Detail-wrap .addcarshow {
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+    #Detail-wrap .addcarshow .masking {
+      width: 100%;
+      flex: 1;
+      background: black;
+      opacity: 0.5; }
+    #Detail-wrap .addcarshow .message {
+      position: relative;
+      background: white;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 0.3rem;
+      box-sizing: border-box;
+      border-top: 1px solid gainsboro; }
+      #Detail-wrap .addcarshow .message .close {
+        position: absolute;
+        right: 0.3rem;
+        top: 0.3rem;
+        display: inline-block;
+        font-size: 0.25rem;
+        border-radius: 50%;
+        border: 0.01rem solid black;
+        width: 0.3rem;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        text-align: center; }
+      #Detail-wrap .addcarshow .message .preview {
+        width: 100%;
+        border-bottom: 1px solid grey;
+        height: 2rem;
+        display: flex; }
+        #Detail-wrap .addcarshow .message .preview section:first-child {
+          width: 1.5rem;
+          height: 2rem;
+          border: 0.02rem solid gainsboro;
+          border-radius: 3px;
+          margin-top: -0.3rem;
+          position: relative;
+          z-index: 99979; }
+          #Detail-wrap .addcarshow .message .preview section:first-child img {
+            width: 100%;
+            display: block; }
+        #Detail-wrap .addcarshow .message .preview section:last-child {
+          padding: 0.4rem;
+          color: red;
+          font-size: 0.25rem;
+          line-height: 0.4rem; }
+          #Detail-wrap .addcarshow .message .preview section:last-child .choosed {
+            color: black;
+            font-size: 0.25rem; }
+      #Detail-wrap .addcarshow .message .all {
+        width: 100%;
+        border-bottom: 1px solid grey;
+        min-height: 1.2rem;
+        padding: 0.3rem 0;
+        display: flex; }
+        #Detail-wrap .addcarshow .message .all .text {
+          font-size: 0.35rem;
+          margin-right: 0.4rem;
+          white-space: nowrap; }
+        #Detail-wrap .addcarshow .message .all .item {
+          margin-bottom: 0.25rem;
+          display: inline-block;
+          padding: 0.1rem 0.2rem;
+          border: 1px solid gainsboro;
+          background: white;
+          border-radius: 0.1rem;
+          font-size: 0.28rem;
+          margin-right: 0.3rem; }
+        #Detail-wrap .addcarshow .message .all .itemchoosed {
+          background: darkred;
+          color: white; }
+      #Detail-wrap .addcarshow .message .clear {
+        clear: both; }
+      #Detail-wrap .addcarshow .message .choosenum {
+        width: 100%;
+        height: 1.8rem;
+        display: flex; }
+        #Detail-wrap .addcarshow .message .choosenum .numbtn {
+          border: 1px solid gainsboro;
+          border-radius: 3px;
+          height: 0.8rem; }
+          #Detail-wrap .addcarshow .message .choosenum .numbtn span {
+            display: inline-block;
+            border-right: 1px solid gainsboro;
+            width: 0.8rem;
+            height: 0.8rem;
+            text-align: center;
+            line-height: 0.8rem;
+            font-size: 0.33rem; }
+          #Detail-wrap .addcarshow .message .choosenum .numbtn span:last-child {
+            border: 0; }
+    #Detail-wrap .addcarshow .twobtn {
+      width: 100%;
+      height: 1rem;
+      display: flex; }
+      #Detail-wrap .addcarshow .twobtn span {
+        flex: 1;
+        display: inline-block;
+        font-size: 0.35rem;
+        text-align: center;
+        line-height: 1rem; }
+      #Detail-wrap .addcarshow .twobtn span:first-child {
+        background: gray;
+        color: white; }
+      #Detail-wrap .addcarshow .twobtn span:last-child {
+        background: darkred;
+        color: white; }
+  #Detail-wrap .none {
+    display: none; }

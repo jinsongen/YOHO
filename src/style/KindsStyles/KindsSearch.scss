@@ -63,6 +63,7 @@
        .neck{
              width:100%;
              height: 1.8rem;
+             position: relative;
              .neck_up{
               width:100%;
               height: 0.7rem;
@@ -88,6 +89,22 @@
                      color: #888;    
               }
                }
+             .kinds_Search{
+                  position: fixed;
+                  z-index: 100;
+                  width:100%;
+                  background:#fff;
+                  top:1.6rem;
+                  padding-left: 0.2rem;
+                  a{
+                       width:100%;
+                       height: 0.7rem;
+                       border-bottom: solid #ddd 0.01rem;
+                       display: block;
+                       line-height: 0.8rem;
+                       padding-left: 0.3rem;
+                  }
+             }
              .neck_down{
                       width:100%;
                       height: 1.1rem;

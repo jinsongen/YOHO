@@ -3,11 +3,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.3rem 0;
+    height: 7rem;
     .slick-slider {
+            height: 6rem;
         width: 68.5%;
+        
         img {
             width: 100%;
+            height: 6rem;
         }
         .slick-dots {
             bottom: 0.1rem;

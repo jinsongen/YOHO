@@ -1,8 +1,9 @@
 import MainReducer from './MainReducers'
+import DetailReducer from './DetailReducer'
 //import OrdersReducer from './OrdersReducer'
-import GoShopping from './GoShoppingReducers'
+
 export default {
 	main_list: MainReducer,
-	goShopping: GoShopping
+	detail_list:DetailReducer
 //	order_list: OrdersReducer
 }
