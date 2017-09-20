@@ -9,11 +9,15 @@ class Guang extends React.Component{
 	constructor(){
 		super();
 	}
+	componentDidMount(){
+        // var id= this.props.params.id;        
+        // console.log(this.props.match.params.id);
+    }
 	render(){
 		return(
 			<div className = "guang">
 				<Header/>
-				<Introduce/>
+				<Introduce flag = {this.props.match.params.id}/>
 				<List/>
 				<Croll/>
 				<Brand/>

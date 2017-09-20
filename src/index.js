@@ -5,7 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import {createStore, combineReducers,applyMiddleware} from 'redux';
 import {connect, Provider} from "react-redux";
-//import thunk from 'redux-thunk';
+// import thunk from 'redux-thunk';
 
 import reducersObj from './reducers/index'
 

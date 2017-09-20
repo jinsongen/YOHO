@@ -76,4 +76,6 @@ class Share extends React.Component{
 		)
 	}
 }
+
 export default  Share
+

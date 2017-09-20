@@ -115,12 +115,23 @@
     margin-top: 0.37rem;
 }
 
-.formList .listPic li {
+.formList .listPic li{
     width: 1.185rem;
     height: 1.123rem;
     border: 1px solid #e0e0e0;
-    background: url("https://m.yohobuy.com/passport/img-check.jpg?t=1505461991409");
+    /* background: url("https://m.yohobuy.com/passport/img-check.jpg?t=1505461991409"); */
+}
+.formList .listPic li:nth-child(1){
     background-position: 0 -0.06rem ; 
+}
+.formList .listPic li:nth-child(2){
+    background-position: -1.25rem -0.06rem ; 
+}
+.formList .listPic li:nth-child(3){
+    background-position: -2.5rem -0.06rem ; 
+}
+.formList .listPic li:nth-child(4){
+    background-position: -3.75rem -0.06rem ; 
 }
 .fromBtn{
     width: 100%;

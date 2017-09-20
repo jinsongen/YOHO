@@ -1,13 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';   
 import '../../style/GuangCss/guangIntroduce.css'
 class Introduce extends React.Component {
     constructor() {
         super();
     }
+    componentDidMount(){     
+        console.log(this.props);
+        this.props.select(this.props.flag)
+    }
     render() {
+        console.log(this.props.detailData.largeimgurls);
+        console.log(this.props.listData);
         return (
             <div className="introduce">
-                <h3 className = "txt1">听说现在睡裤很流行外穿！？</h3>
+                <h3 className = "txt1">{this.props.detailData.name}</h3>
                 <div className = "notice"> 
                     <div className = "notice-lt">
                         <p className = "notice-timer">
@@ -18,10 +25,33 @@ class Introduce extends React.Component {
                         </p>
                     </div>
                 </div>
-                <img className = "clothesPic" src = "//img11.static.yhbimg.com/goodsimg/2017/09/13/14/01858c053b4de7652ba9ab23257b0417e4.jpg?imageView2/2/w/640/h/640/q/60" alt = ""/>
-                <p className = "clothesDetail">Stussy 字母图案印花卫衣，经典百搭，胸前有字母印花，材质使用了舒适的棉质，面料透气舒适，由整齐车线缝制而成的底边，走线均匀细密，彰显良好工艺品质。下身是Improper 格纹休闲长裤，经典的格纹元素，舒适的面料和修饰腿型的版型让人不能错过，整体造型玩味十足，街头感很强！</p>
+                <img className = "clothesPic" src = {this.props.detailData.largeimgurls?this.props.detailData.largeimgurls[0]:""} alt = ""/>
+                <p className = "clothesDetail">{this.props.detailData.longname}</p>
             </div>      
         )
     }
 }
-export default Introduce
+// export default Introduce
+function mapStateToProps(state) {
+        console.log(state.goShopping.detailData);
+        return {
+            detailData: state.goShopping.detailData,
+            listData: state.goShopping.listData
+        }
+    }
+    function mapDispatchToProps(dispatch) {
+        return {
+        select(id) {
+            fetch("/api/getdetail").then((res) => {
+                    return res.json();
+                }).then((data) => {
+                    console.log(data[0].products[id])
+                    dispatch({
+                        type:"SELECT",
+                        payload:data[0].products[id]
+                    })
+                })
+            }
+        }
+    }
+    export default connect(mapStateToProps, mapDispatchToProps)(Introduce)

@@ -3,9 +3,9 @@ import "../../style/RegisterCss/registerForm.css"
 class RegisterForm extends React.Component {
 	constructor() {
         super();
-        this.state = {flag1:true,flag2:false};
-        this.change = this.change.bind(this);
-        // this.change2 = this.change2.bind(this);
+        this.state = {flag1:false,flag2:true};
+		this.change = this.change.bind(this);
+		this.register = this.register.bind(this);
     }
     change(){
         console.log(1);
@@ -14,7 +14,23 @@ class RegisterForm extends React.Component {
             flag2:!this.state.flag2
         });
         
-    }
+	}
+	register(){
+		let username = this.refs.username.value;
+		let psw = this.refs.psw.value;
+		fetch(`/api/register?username=${username}&psw=${psw}&t=${new Date().getTime().toString()}`)
+		.then((response) => response.json())
+		.then((json) => {
+			//处理返回值
+			if(json.msg){
+				window.location = "/";
+			}else{
+				console.log("f");
+			}
+			
+		})
+		
+	}
 	render() {
 		return (
 			<div className="form">
@@ -38,7 +54,7 @@ class RegisterForm extends React.Component {
 						<span className="triangle"></span>
 					</div>
 					<div className="spacer"></div>
-					<input className="phoneNum" type="text" placeholder="请输入手机号" />
+					<input className="phoneNum" type="text" placeholder="请输入手机号" ref = "username" />
 
 				</div>
 				<div className = "formCode">
@@ -48,7 +64,7 @@ class RegisterForm extends React.Component {
 				</div>
                 <div className = "formCode">
 					<i className = "iconfont iconfont-jiesuo"></i>
-					<input className="codeMsg" type="text" placeholder="请输入密码" />
+					<input className="codeMsg" type={this.state.flag1?"text":"password"} placeholder="请输入密码" ref = "psw"/>
 					<i className = "iconfont iconfont-yanjing eyes" onClick={this.change} style={this.state.flag1?{display:"block"}:{display:"none"}}></i>
                     <i className = "iconfont iconfont-niming eyes" onClick={this.change}  style={this.state.flag2?{display:"block"}:{display:"none"}}></i>
 				</div>
@@ -67,7 +83,7 @@ class RegisterForm extends React.Component {
 						<li></li>
 						<li></li>
 					</ul>
-					<button className = "fromBtn">注册</button>
+					<button className = "fromBtn" onClick = {this.register}>注册</button>
 				</div>
 			</div>
 		)

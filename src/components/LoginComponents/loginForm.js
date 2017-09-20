@@ -3,6 +3,23 @@ import "../../style/LoginCss/loginForm.css"
 class LoginForm extends React.Component {
 	constructor() {
 		super();
+		this.login = this.login.bind(this);
+	}
+	login(){
+		let username = this.refs.username.value;
+		fetch(`/api/login?username=${username}&t=${new Date().getTime().toString()}`)
+		.then((response) => response.json())
+		.then((json) => {
+			//处理返回值
+			console.log(json.msg);
+			if(json.msg){
+				window.location = "/";
+			}else{
+				console.log("t");
+			}
+			
+		})
+		
 	}
 	render() {
 		return (
@@ -27,7 +44,7 @@ class LoginForm extends React.Component {
 						<span className="triangle"></span>
 					</div>
 					<div className="spacer"></div>
-					<input className="phoneNum" type="text" placeholder="请输入手机号" />
+					<input className="phoneNum" type="text" placeholder="请输入手机号" ref = "username"/>
 
 				</div>
 				<div className = "formCode">
@@ -46,7 +63,7 @@ class LoginForm extends React.Component {
 						<li></li>
 						<li></li>
 					</ul>
-					<button className = "fromBtn">登录</button>
+					<button className = "fromBtn" onClick = {this.login}>登录</button>
 					<div className = "fromAccount">
 						<a>海外账号登录</a>
 						<a>账号密码登录</a>

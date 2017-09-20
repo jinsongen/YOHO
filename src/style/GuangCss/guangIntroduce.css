@@ -9,6 +9,11 @@
     font-size: 18px;
     margin-top: 0.15rem;
     font-weight: bold;
+    width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-break:keep-all;
 }
 .introduce .notice{
     overflow: hidden;
@@ -37,4 +42,5 @@
 .introduce .clothesDetail{
     margin-top: 0.31rem;
     line-height: 0.34rem;
+    margin-bottom: 0.25rem;
 }

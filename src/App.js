@@ -38,7 +38,7 @@ class App extends Component {
 	      
 	      	      <Route path="/login" component={Login}/>
 				<Route path="/register" component={Register}/>
-				<Route path="/guang" component={Guang}/>
+				<Route path="/guang/:id" component={Guang}/>
 	    </div>
       
 	      

@@ -30,8 +30,15 @@
   },
   "proxy": {
     "/api": {
-      "target": "http://10.9.158.23:8080/",
+      "target": "http://10.9.158.23:8080",
       "ws": true
+    },
+    "/passport": {
+      "target": "https://m.yohobuy.com",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/passport": "/passport"
+      }
     }
   }
 }
