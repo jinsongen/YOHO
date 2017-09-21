@@ -6,6 +6,9 @@ class RegisterForm extends React.Component {
         this.state = {flag1:false,flag2:true};
 		this.change = this.change.bind(this);
 		this.register = this.register.bind(this);
+		this.state = {
+			hid:0
+		}
     }
     change(){
         console.log(1);
@@ -23,9 +26,20 @@ class RegisterForm extends React.Component {
 		.then((json) => {
 			//处理返回值
 			if(json.msg){
+				localStorage.clear();
+				localStorage.setItem("info",`{"flag":${json.msg},"msg":"${username}"}`);
 				window.location = "/";
 			}else{
-				console.log("f");
+				// console.log("f");
+				console.log("用户已注册");
+				this.setState({
+					hid:!this.state.hid
+				})
+				setTimeout(()=>{
+					this.setState({
+						hid:!this.state.hid
+					})
+				},2000);
 			}
 			
 		})
@@ -84,6 +98,9 @@ class RegisterForm extends React.Component {
 						<li></li>
 					</ul>
 					<button className = "fromBtn" onClick = {this.register}>注册</button>
+				</div>
+				<div className = "form-tip" style = {this.state.hid == 1?{display:"block"}:{display:"none"}}>
+					用户名已注册
 				</div>
 			</div>
 		)

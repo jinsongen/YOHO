@@ -148,3 +148,19 @@
 .active{
    display: none; 
 }
+
+
+.form-tip{
+    height: 0.7rem;
+    width: 2.5rem;
+    position: fixed;
+    background: #000;
+    opacity: 0.5;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    top:4rem;
+    left: 2rem;
+    line-height: 0.7rem;
+    display: none;
+}

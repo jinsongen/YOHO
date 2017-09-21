@@ -15,7 +15,7 @@ class GoShopping extends React.Component{
 			<div className = "goShop">
 				<Header/>
 				<Banner/>
-				<Link to = "/guang"><Share/></Link>
+				{/* <Link to = "/guang"><Share/></Link> */}
 				<ShareXX/>
 				<Footer/>
 			</div>

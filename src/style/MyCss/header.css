@@ -41,3 +41,25 @@
   background: #fff;
   margin-top:0.18rem;
 }
+.header-Info{
+  width: 100%;
+}
+.header-Info .header-pic{
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-image: url(https://cdn.yoho.cn/m-yohobuy-node/6.0.23/img/home/index/user-avatar.png?15e9e058e4f);
+  background-size: 100%;
+  border: 5px solid #a7a8a9;
+  float: left;
+}
+.header-Info .header-pho{
+  color: #ffff;
+  float: left;
+  margin: 0.3rem;
+}
+.header-Info .header-signOut{
+  color: #ffff;
+  float: right;
+  margin: 0.3rem;
+}

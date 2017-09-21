@@ -1,9 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';   
+import { History } from 'react-router';
 import "../../style/LoginCss/loginForm.css"
 class LoginForm extends React.Component {
 	constructor() {
 		super();
 		this.login = this.login.bind(this);
+		this.state = {
+			hid:0
+		}
 	}
 	login(){
 		let username = this.refs.username.value;
@@ -13,9 +18,20 @@ class LoginForm extends React.Component {
 			//处理返回值
 			console.log(json.msg);
 			if(json.msg){
+				localStorage.clear();
+				localStorage.setItem("info",`{"flag":${json.msg},"msg":"${username}"}`);
 				window.location = "/";
 			}else{
-				console.log("t");
+				// console.log("t");
+				console.log("用户不存在");
+				this.setState({
+					hid:!this.state.hid
+				})
+				setTimeout(()=>{
+					this.setState({
+						hid:!this.state.hid
+					})
+				},2000);
 			}
 			
 		})
@@ -63,15 +79,49 @@ class LoginForm extends React.Component {
 						<li></li>
 						<li></li>
 					</ul>
-					<button className = "fromBtn" onClick = {this.login}>登录</button>
+					<button className = "fromBtn" onClick = {()=>{this.login()}}>登录</button>
 					<div className = "fromAccount">
 						<a>海外账号登录</a>
 						<a>账号密码登录</a>
 						<a>忘记密码?</a>
 					</div>
 				</div>
+				<div className = "form-tip" style = {this.state.hid == 1?{display:"block"}:{display:"none"}}>
+					用户名不存在
+				</div>
 			</div>
 		)
 	}
 }
 export default LoginForm
+// function mapStateToProps(state) {
+// 	console.log(state.my.flag);
+// 	return {
+// 		flag: state.my.flag
+// 	}
+// }
+// function mapDispatchToProps(dispatch) {
+// 	return {
+// 		login(vlaue){
+// 			let username = vlaue;
+// 			fetch(`/api/login?username=${username}&t=${new Date().getTime().toString()}`)
+// 			.then((response) => response.json())
+// 			.then((json) => {
+// 				//处理返回值
+// 				console.log(json.msg);
+// 				if(json.msg){
+// 					dispatch({
+// 						type:"FLAG",
+// 						payload:json.msg
+// 					})
+// 					this.props.history.pushState(null, '/');
+// 				}else{
+// 					console.log("t");
+// 				}
+				
+// 			})
+			
+// 		}
+// 	}
+// }
+// export default connect(mapStateToProps, mapDispatchToProps)(LoginForm)
