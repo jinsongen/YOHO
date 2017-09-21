@@ -170,18 +170,26 @@ class GoodsCar extends React.Component {
 		})
 	}
 	componentDidMount() {
-		if(this.props.detail_list.length == 0) {
-			this.state.isGoods = false
-			this.setState({
-				isGoods: this.state.isGoods
-			})
-		} else {
-			this.state.detail_list = this.props.detail_list
-			this.setState({
-				detail_list: this.state.detail_list
-			})
-			console.log(this.state.detail_list)
+		if(localStorage.getItem("info") !== null){
+			this.state.isLogin="true"
+			if(this.props.detail_list.length == 0) {
+				this.state.isGoods = false
+				this.setState({
+					isGoods: this.state.isGoods
+				})
+			}else{
+				this.state.detail_list = this.props.detail_list
+				this.setState({
+					detail_list: this.state.detail_list
+				})
+				console.log(this.state.detail_list)
+			}
+		}else{
+			this.state.isLogin="false"
+			
+			// console.log(2);
 		}
+		
 
 	}
 	render() {

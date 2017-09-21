@@ -95,6 +95,24 @@
       #Detail-wrap .detail-footer div span:last-child, #Detail-wrap .detail-footer a span:last-child {
         font-size: 0.2rem;
         transform: scale(0.8); }
+    #Detail-wrap .detail-footer a {
+      position: relative; }
+      #Detail-wrap .detail-footer a .text {
+        font-size: 0.2rem;
+        transform: scale(0.8); }
+      #Detail-wrap .detail-footer a .num {
+        position: absolute;
+        display: inline-block;
+        width: 0.4rem;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        text-align: center;
+        color: white;
+        background: red;
+        border-radius: 50%;
+        font-size: 0.3rem;
+        top: 0rem;
+        right: 0rem; }
     #Detail-wrap .detail-footer .addcarbtn {
       padding: 0 0.2rem;
       height: 0.7rem;

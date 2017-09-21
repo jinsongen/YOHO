@@ -115,6 +115,28 @@
                 transform: scale(0.8);
             }
         }
+        a{
+       
+            position: relative;
+            .text{
+                 font-size: 0.2rem;
+                transform: scale(0.8);
+            }
+            .num{
+                position: absolute;
+                display: inline-block;
+                width: 0.4rem;
+                height: 0.4rem;
+                line-height: 0.4rem;
+                text-align: center;
+                color:white;
+                background: red;
+                border-radius: 50%;
+                font-size: 0.3rem;
+                top:0rem;
+                right: 0rem;
+            }
+        }
         
             .addcarbtn {
                 padding: 0 0.2rem;

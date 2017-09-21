@@ -17,6 +17,7 @@ class Detail extends React.Component {
 		this.addcar = this.addcar.bind(this)
 		this.finalladdcar = this.finalladdcar.bind(this)
 		this.state = {
+			num:0,
 			itemcode: "",
 			showaddcar: "none",
 			title: "",
@@ -138,9 +139,23 @@ class Detail extends React.Component {
 			price:this.state.price,
 			title:this.state.title
 		}
-		this.props.addstore(obj)
-		//console.log(this.state.choosedcolor, this.state.choosedsize, this.state.choosenum, this.state.itemcode)
-		this.noaddcar()
+		if(localStorage.getItem("info") !== null){
+			this.props.addstore(obj)//加到store
+			this.noaddcar()
+			console.log(this.props)
+			var num = 0;
+			for(var i = 0;i<this.props.detail_list.length;i++){
+				num += Number(this.props.detail_list[i].num)
+			}
+			this.state.num = num
+			this.setState({
+				num:this.state.num
+			})
+		}else{
+			alert("请先登录")
+			return
+		}
+		
 	}
 	render() {
 		//		console.log(this.props);
@@ -202,7 +217,7 @@ class Detail extends React.Component {
                 </p>
                 <div className="detail-footer">
                 
-                	<Link to="/goodsCar"><span className="iconfont">&#xe670;</span><span>购物车</span></Link>
+                	<Link to="/goodsCar"><span className="iconfont">&#xe670;</span><span className="text">购物车</span><span className="num">{this.state.num}</span></Link>
                 	<div><span className="iconfont">&#xe66a;</span><span>品牌店铺</span></div>
                 	<div><span className="iconfont">&#xe649;</span><span>收藏</span></div>
                 	<button className="addcarbtn" onClick={this.addcar}>加入购物车</button>
