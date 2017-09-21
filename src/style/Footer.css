@@ -7,8 +7,6 @@
   display: flex;
   border-top: 1px solid grey;
   z-index: 99999; }
-  #app_footer .select a {
-    color: #333333; }
   #app_footer li {
     flex: 1; }
     #app_footer li a {
@@ -23,3 +21,5 @@
       #app_footer li a span {
         margin-top: 0.05rem;
         font-size: 0.25rem; }
+  #app_footer .footeractive a {
+    color: black; }

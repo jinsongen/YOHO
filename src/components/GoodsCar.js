@@ -17,37 +17,12 @@ class GoodsCar extends React.Component {
 		this.check = this.check.bind(this)
 		this.state = {
 			isLogin: "true", //是否登录
-			isGoods: "true", //购物车是否有货物
+			isGoods: "false", //购物车是否有货物
 			compile: "", //是否编辑的类名
 			compiletext: "编辑",
 			allprice: 0,
 			allnum: 0,
-			detail_list: [{
-				color: "蓝色",
-				img: "https://p10.ytrss.com/product/21/463/4554/LargeImage/4492.jpg",
-				itemcode: "21-463-4553",
-				num: 2,
-				price: 700,
-				size: "XL",
-				title: "【新品】【自营】HUGO BOSS雨果·博斯纯棉涂鸦设计男士短袖T恤"
-			}, {
-				color: "黑色",
-				img: "https://p10.ytrss.com/product/21/463/4554/LargeImage/4492.jpg",
-				itemcode: "21-463-4553",
-				num: 3,
-				price: 700,
-				size: "XL",
-				title: "【新品】【自营】HUGO BOSS雨果·博斯纯棉涂鸦设计男士短袖T恤"
-			},
-			{
-				color: "黑色",
-				img: "https://p10.ytrss.com/product/21/463/4554/LargeImage/4492.jpg",
-				itemcode: "21-463-4553",
-				num: 3,
-				price: 700,
-				size: "XL",
-				title: "【新品】【自营】HUGO BOSS雨果·博斯纯棉涂鸦设计男士短袖T恤"
-			}]
+			detail_list: []
 		}
 
 	}
@@ -194,21 +169,21 @@ class GoodsCar extends React.Component {
 			detail_list:this.state.detail_list
 		})
 	}
-//	componentDidMount() {
-//		if(this.props.detail_list.length == 0) {
-//			this.state.isGoods = false
-//			this.setState({
-//				isGoods: this.state.isGoods
-//			})
-//		} else {
-//			this.state.detail_list = this.props.detail_list
-//			this.setState({
-//				detail_list: this.state.detail_list
-//			})
-//			console.log(this.state.detail_list)
-//		}
-//
-//	}
+	componentDidMount() {
+		if(this.props.detail_list.length == 0) {
+			this.state.isGoods = false
+			this.setState({
+				isGoods: this.state.isGoods
+			})
+		} else {
+			this.state.detail_list = this.props.detail_list
+			this.setState({
+				detail_list: this.state.detail_list
+			})
+			console.log(this.state.detail_list)
+		}
+
+	}
 	render() {
 		//		console.log(this.props.detail_list)
 		return(

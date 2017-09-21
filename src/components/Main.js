@@ -23,12 +23,10 @@ class Main extends React.Component {
 		this.loadData = this.loadData.bind(this)
 		this.state = {
 			listarr: [],
-			
 			currentPage: 1,
       		lastPage: false
 		}
 		this.prop={
-
 				pullUp: true,
 				pullDown: false,
 				pullUpThreshold:0.1
@@ -73,13 +71,13 @@ class Main extends React.Component {
 	      this.loadData(downOrUp, callback);
 	    });
 	}
-	loadData(downOrUp, callback) {
+	loadData(downOrUp, callback) {//加载数据
 		var that = this;
     	const {currentPage} = this.state;
 		axios.get('/api/getlist').then(res => {
 			var indexlistarr = res.data[0].data[0].data.data.recommend.categoryrecommend[0].data.data.product_list;
-			console.log(indexlistarr)
-			for(var i = 0; i < 10; i++) {
+
+			for(var i = 0; i < 30; i++) {
 				that.state.listarr.push(
 					<section key={indexlistarr[i].itemcode}>
 						<Link to={"/detail?itemcode="+indexlistarr[i].itemcode} onClick={this.add}>
@@ -129,7 +127,7 @@ class Main extends React.Component {
 				<header className="main-header">
 					<span className="iconfont icon">&#xe667;</span>
 					<h3>YaoHe!</h3>
-					<span className="iconfont icon">&#xe665;</span>
+					<Link to="/kindssearch" className="iconfont icon">&#xe665;</Link>
 				</header>
 					<LunBo/>
 				<Active/>

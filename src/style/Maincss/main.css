@@ -9,9 +9,8 @@
     width: 100%;
     height: 0.9rem;
     background: linear-gradient(top, #2b2a2a, #414141);
-    border-bottom: 1px solid #EEEEEE;
     display: flex; }
-    #main_wrap .main-header span {
+    #main_wrap .main-header .icon {
       height: 0.9rem;
       width: 0.9rem;
       line-height: 0.9rem;

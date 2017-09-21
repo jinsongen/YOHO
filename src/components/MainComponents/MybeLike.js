@@ -32,7 +32,7 @@ export default class MaybeLike extends React.Component{
 		axios.get('/api/getlist').then(res=>{
 			var indexlistarr=res.data[0].data[0].data.data.recommend.categoryrecommend[0].data.data.product_list;
 			console.log(indexlistarr)
-		for(var i=0;i<10;i++){
+		for(var i=0;i<30;i++){
 			that.state.listarr.push(
 				<section key={indexlistarr[i].itemcode}>
 						<Link to={"/detail?itemcode="+indexlistarr[i].itemcode} onClick={this.add}>
